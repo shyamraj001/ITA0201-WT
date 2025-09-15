@@ -1,0 +1,33 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+ <title>Employee Details</title> 
+</head> 
+<body> 
+ <form action="EmployeeServlet" method="post"> 
+ Name: <input type="text" name="ename"><br> 
+ Department: <input type="text" name="edept"><br> 
+ Employee ID: <input type="text" name="eid"><br> 
+ <input type="submit" value="Submit"> 
+ </form> 
+</body> 
+</html> 
+Program (Servlet): 
+import java.io.*; 
+import javax.servlet.*; 
+import javax.servlet.http.*; 
+public class EmployeeServlet extends HttpServlet { 
+ protected void doPost(HttpServletRequest request, HttpServletResponse response) throws  ServletException, IOException { 
+ response.setContentType("text/html"); 
+ PrintWriter out = response.getWriter(); 
+ String name = request.getParameter("ename"); 
+ String dept = request.getParameter("edept"); 
+ String id = request.getParameter("eid"); 
+ out.println("<html><body>"); 
+ out.println("<h2>Employee Details</h2>"); 
+ out.println("Name: " + name + "<br>"); 
+ out.println("Department: " + dept + "<br>"); 
+ out.println("Employee ID: " + id + "<br>"); 
+ out.println("</body></html>"); 
+ } 
+} 

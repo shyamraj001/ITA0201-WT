@@ -1,0 +1,23 @@
+<!DOCTYPE html> 
+<html> 
+<head><title>Employee Registration</title></head> 
+<body> 
+<form action="employee.jsp" method="post"> 
+ Name: <input type="text" name="name"><br> 
+ ID: <input type="text" name="id"><br> 
+ Department: <input type="text" name="dept"><br> 
+ <input type="submit" value="Submit"> 
+</form> 
+</body> 
+</html> 
+Program (employee.jsp): 
+<%@ page language="java" %> 
+<% 
+ String name = request.getParameter("name"); 
+ String id = request.getParameter("id"); 
+ String dept = request.getParameter("dept"); 
+%> 
+<h2>Employee Details</h2> 
+Name: <%= name %><br> 
+ID: <%= id %><br> 
+Department: <%= dept %> 
