@@ -1,0 +1,74 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+ <title>Employee Registration Form</title> 
+ <link rel="stylesheet" type="text/css" href="style.css"> 
+</head> 
+<body> 
+<div class="container"> 
+ <h2>Employee Registration Form</h2>
+7 
+ <form> 
+ <label for="name">Employee Name:</label> 
+ <input type="text" id="name" name="name" required><br><br> 
+ <label for="id">Employee ID:</label> 
+ <input type="text" id="id" name="id" required><br><br> 
+ <label for="address">Address:</label><br> 
+ <textarea id="address" name="address" rows="4" cols="30" required></textarea><br><br> 
+ <label for="dept">Department:</label> 
+ <input type="text" id="dept" name="dept" required><br><br> 
+ <label for="mobile">Mobile Number:</label> 
+ <input type="text" id="mobile" name="mobile" required><br><br> 
+ <label for="city">City:</label> 
+ <select id="city" name="city" required> 
+ <option value="">--Select City--</option> 
+ <option value="Chennai">Chennai</option> 
+ <option value="Bangalore">Bangalore</option> 
+ <option value="Hyderabad">Hyderabad</option> 
+ <option value="Mumbai">Mumbai</option> 
+ </select><br><br> 
+ <input type="submit" value="Register"> 
+ </form> 
+</div> 
+</body> 
+</html> 
+style.css 
+body { 
+ font-family: Arial, sans-serif; 
+ background-color: #f0f8ff; 
+} 
+.container { 
+ background-color: white; 
+ padding: 20px; 
+ margin: 50px auto; 
+ width: 400px; 
+ border: 2px solid #ccc; 
+ border-radius: 10px; 
+} 
+h2 { 
+ text-align: center; 
+ color: darkblue; 
+} 
+label {
+8 
+ font-weight: bold; 
+} 
+input[type="text"], textarea, select { 
+ width: 100%; 
+ padding: 8px; 
+ margin: 5px 0 15px 0; 
+ border: 1px solid #ccc; 
+ border-radius: 5px; 
+} 
+input[type="submit"] { 
+ background-color: darkblue; 
+ color: white; 
+ padding: 10px; 
+ width: 100%; 
+ border: none; 
+ border-radius: 5px; 
+ cursor: pointer; 
+} 
+input[type="submit"]:hover { 
+ background-color: navy; 
+} 

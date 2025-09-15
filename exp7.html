@@ -1,0 +1,42 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+ <title>Float Positioning Example</title> 
+ <link rel="stylesheet" type="text/css" href="style.css"> 
+</head> 
+<body> 
+ <div class="box-left"> 
+ <h2>Left Box</h2> 
+ <p>This box floats to the left side.</p> 
+ </div> 
+ <div class="box-right"> 
+ <h2>Right Box</h2>
+11 
+ <p>This box floats to the right side.</p> 
+ </div> 
+</body> 
+</html> 
+style.css 
+body { 
+ font-family: Arial, sans-serif; 
+ margin: 20px; 
+} 
+.box-left { 
+ width: 45%; 
+ float: left; 
+ background-color: #add8e6; 
+ padding: 20px; 
+ margin-right: 5%; 
+} 
+.box-right { 
+ width: 45%; 
+ float: left; 
+ background-color: #f08080; 
+ padding: 20px; 
+} 
+/* Clear floats after the floated elements */ 
+body::after { 
+ content: ""; 
+ display: table; 
+ clear: both; 
+} 

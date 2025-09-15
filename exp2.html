@@ -1,0 +1,21 @@
+<html> 
+<head> 
+ <title>Nearest Odd Number</title> 
+ <script> 
+ function findNearestOdd() { 
+ let num = parseInt(prompt("Enter a number:")); 
+ let nearestOdd; 
+ if (num % 2 === 0) { 
+ nearestOdd = num + 1; // or num - 1 
+ } else { 
+ nearestOdd = num; 
+ } 
+ alert("The nearest odd number is: " + nearestOdd); 
+ } 
+ </script> 
+</head> 
+<body> 
+ <h1>Nearest Odd Number Finder</h1> 
+ <button onclick="findNearestOdd()">Find Nearest Odd</button> 
+</body> 
+</html> 

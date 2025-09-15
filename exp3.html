@@ -1,0 +1,28 @@
+index.html 
+<!DOCTYPE html> 
+<html> 
+<head> 
+ <title>Relative Positioning Example</title> 
+ <link rel="stylesheet" type="text/css" href="style.css"> 
+</head> 
+<body> 
+<div class="parent"> 
+ <h1 class="child">Welcome to CSS Positioning</h1> 
+ <p>This paragraph remains normally positioned.</p> 
+</div> 
+</body> 
+</html> 
+style.css 
+.parent { 
+ border: 2px solid blue; 
+ padding: 20px; 
+ width: 400px; 
+ height: 200px; 
+ position: relative; 
+} 
+.child { 
+ position: relative; 
+ top: 30px; /* Move the h1 element 30px down */ 
+ left: 20px; /* Move the h1 element 20px to the right */ 
+ color: darkgreen; 
+} 
