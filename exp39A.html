@@ -1,0 +1,62 @@
+<html> 
+<head> 
+<title>Processing get requests with data</title> 
+</head> 
+<body> 
+<form action = "Servlet3" method = "get"> 
+
+<br /> 
+<b><p><label>Enter Your name Please!!
+
+53 
+<input type = "text" name = "firstname" /> 
+<input type = "submit" value = "Submit" /> 
+</label></p></b> 
+</form> 
+</body> 
+</html> 
+//Servlet3.java 
+import 
+java.io.IOException;import  
+java.io.PrintWriter; 
+import 
+javax.servlet.ServletException;  
+import  
+javax.servlet.annotation.WebServle 
+t; import  
+javax.servlet.http.HttpServlet; 
+import 
+javax.servlet.http.HttpServletRequest;  
+import  
+javax.servlet.http.HttpServletResponse; 
+public class Servlet3 extends HttpServlet { 
+protected void doGet(HttpServletRequest request,  HttpServletResponseresponse) 
+throws ServletException, IOException {  
+String firstName = request.getParameter( 
+"firstname" 
+);response.setContentType( 
+"text/html" ); PrintWriter out =  
+response.getWriter(); 
+// send XHTML document to client 
+// start XHTML  
+documentout.println(  
+"<html>" ); 
+// head section of  
+documentout.println(  
+"<head>" ); 
+out.println("<title>Processing get requests with data</title>" );out.println( "</head>" ); 
+// body section of  
+documentout.println(  
+"<body>" ); 
+out.println( "<h1>Hello " + firstName + ",<br />" );out.println( "Welcome to Servlets!</h1>" );  
+out.println( "</body>" ); 
+// end XHTML document  
+out.println( "</html>" ); 
+out.close(); // close stream to complete the page } 
+public String  
+getServletInfo()
+54 
+{ return "Short  
+description"; 
+} 
+} 

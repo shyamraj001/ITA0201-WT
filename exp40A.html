@@ -1,0 +1,169 @@
+<html> 
+<head> 
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> <title>Welcome to Online Examination!!!!</title> 
+</head> 
+<body> 
+Welcome to Online Examination!!!! 
+<form action="exam" method="get"> 
+<label><p> Enter Your name Please!!<br/> <input  
+type="text"name="name"/> 
+<br/> 
+<input type="submit" name="SUBMIT"/> 
+</p></label> 
+</form> 
+</body> 
+</html>
+60 
+//exam.java 
+import java.io.IOException;import  
+java.io.PrintWriter; 
+import javax.servlet.ServletException; import  
+javax.servlet.annotation.WebServlet;import  
+javax.servlet.http.HttpServlet; 
+import javax.servlet.http.HttpServletRequest; 
+import  
+javax.servlet.http.HttpServletResponse;public  
+class exam extends HttpServlet { 
+protected void doGet(HttpServletRequest request,  
+HttpServletResponseresponse) 
+throws ServletException, 
+IOException {  
+response.setContentType("text/html");  
+PrintWriter out=response.getWriter();  
+String  
+name=request.getParameter("name");  
+out.println("<html>"); 
+out.println("<head>"); 
+out.println("<title>Online Examination</title>");  
+out.println("</head>"); 
+out.println("<body bgcolor=PINK>"); 
+out.println("<h2 align=center>Online  
+Examination</h2><hr>"); out.println("<h3 align=center>  
+Welcome  
+Mr."+name+"</h3><hr>");out.println("<h4><u>Terms and  
+Conditions:</u></h4>"); out.println("<ul type=disc>");  
+out.println("<li>The Paper consists a set of five 
+questions.</li>"); out.println("<li>Every question consists of  
+two options.</li>"); out.println("<li>All must be  
+answered</li></ul><hr>");  
+out.println("<center><h5><u>Your  
+Questions</u></h5></center>");out.println("<hr>");  
+out.println("<form method=get action=exam2>");  
+out.println("<p>1.Operating System is a ..........</p>"); 
+out.println("<input type=radio name=q1  
+value=0>Hardware");out.println("<br>");  
+out.println("<input type=radio name=q1  
+value=1>Software");out.println("<hr>"); 
+out.println("<p>2.Developer of C Language is .........</p>"); 
+out.println("<br>"); 
+out.println("<input type=radio name=q2 
+value=0>Dennis Richee");out.println("<br>"); 
+out.println("<input type=radio name=q2 
+value=1>James Thompson");out.println("<hr>"); 
+out.println("<p>3.Which of the following is a multitasking,multi  user,multiprocessing); 
+out.println("OS.......</p>");
+61 
+out.println("<br>"); 
+out.println("<input type=radio name=q3 value=0>MS  
+DOS");out.println("<br>"); 
+out.println("<input type=radio name=q3 value=1>Windows  
+NT");out.println("<hr>"); 
+out.println("<p>4.Father of Computers is .......... </p>"); 
+out.println("<br>"); 
+out.println("<input type=radio name=q4 
+value=1>Charles babbage");out.println("<br>"); 
+out.println("<input type=radio name=q4 
+value=0>Charles Dickson");out.println("<hr>"); 
+out.println("<p>5.What is the current generation of computers ?</p>");out.println("<br>");  
+out.println("<input type=radio name=q5  
+value=0>Fifth");out.println("<br>");  
+out.println("<input type=radio name=q5  
+value=1>Sixth");out.println("<hr>");  
+out.println("<input type=submit  
+value=Done>");out.println("</form>");  
+out.println("</body>");  
+out.println("</html>"); 
+} 
+public String getServletInfo() 
+{ return "A Servlet of the  
+user"; 
+} 
+} 
+//exam2.java 
+import  
+java.io.IOException;impor 
+t java.io.PrintWriter; 
+import 
+javax.servlet.ServletException;  
+import  
+javax.servlet.annotation.WebServle 
+t; 
+import javax.servlet.http.HttpServlet; 
+import  
+javax.servlet.http.HttpServletRequest;  
+import  
+javax.servlet.http.HttpServletResponse;pu 
+blic class exam2 extends HttpServlet { 
+protected void doGet(HttpServletRequest request, 
+HttpServletResponse  
+response) 
+throws ServletException,  
+IOException {int count=0,j; 
+62 
+response.setContentType("text/h 
+tml ");PrintWriter  
+out=response.getWriter(); String  
+q1=request.getParameter("q1");  
+String  
+q2=request.getParameter("q2");  
+String 
+q3=request.getParameter("q3");  
+String  
+q4=request.getParameter("q4");  
+String  
+q5=request.getParameter("q5");  
+if(q1.equals("1")) 
+{ 
+count=count+1; 
+} 
+if(q2.equals("1")) 
+{ 
+count=count+1; 
+} 
+if(q3.equals("1")) 
+{ 
+count=count+1; 
+} 
+if(q4.equals("1")) 
+{ 
+count=count+1; 
+} 
+if(q5.equals("1")) 
+{ 
+count=count+1; 
+} 
+out.println("<html>");  
+out.println("<head><title>Examination  
+Results</title></head>");out.println("<body>"); 
+out.println("<h2 align=center<Online Examination</h2><hr>");  out.println("<h3>Number of Questions answered  
+correctly:</h3>"+count);if(count>=3) 
+{ 
+out.println("<hr><h3>Congrats!!! You Have  
+Passed!!!</h3><hr>"); 
+out.println("<h4><b>Try Other Tests!!</b></h4>"); } 
+else 
+{ 
+out.println("<hr><h3>Sorry!!! You Have 
+63 
+
+Failed!!!</h3><hr>");out.println("<h4><b>Try  
+Again:</b></h4>"); 
+} 
+out.println("</body>");  
+out.println("</html>"); 
+} 
+public String getServletInfo() 
+{ return "A Servlet of the  
+User"; 
+} 
+} 

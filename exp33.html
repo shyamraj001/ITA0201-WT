@@ -1,0 +1,23 @@
+<!DOCTYPE html> 
+<html> 
+<head><title>Student Registration</title></head> 
+<body> 
+<form onsubmit="return validateForm()"> 
+ Name: <input type="text" id="name"><br> 
+ Email: <input type="email" id="email"><br> 
+ <input type="submit" value="Register"> 
+</form> 
+<script>
+34 
+ function validateForm() { 
+ if (document.getElementById("name").value === "") { 
+ alert("Name is required"); return false; 
+ } 
+ if (document.getElementById("email").value === "") { 
+ alert("Email is required"); return false; 
+ } 
+ return true; 
+ } 
+</script> 
+</body> 
+</html> 
